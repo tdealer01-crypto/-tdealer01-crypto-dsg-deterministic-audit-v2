@@ -1,0 +1,5 @@
+{
+  "name": "DSG: Deterministic Security Guarantees",
+  "description": "A research-grade deterministic audit framework for reproducible security verification and formal proofs.",
+  "requestFramePermissions": []
+}
