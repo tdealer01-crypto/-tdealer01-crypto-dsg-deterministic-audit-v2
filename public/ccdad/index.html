@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCDAD-100 Deterministic Audit Dashboard</title>
+  <style>
+    body { font-family: 'JetBrains Mono', monospace; background: #0f1117; color: #e6e6e6; margin: 0; padding: 0; }
+    header { background: #151823; padding: 16px 24px; border-bottom: 2px solid #2e344d; position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+    h1 { margin: 0; font-size: 16px; color: #fff; letter-spacing: 1px; }
+    .container { display: grid; grid-template-columns: 1fr; gap: 1px; background: #2e344d; border-bottom: 1px solid #2e344d; }
+    section { background: #0f1117; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #2e344d; }
+    .back-btn { color: #4caf50; text-decoration: none; font-size: 12px; border: 1px solid #4caf50; padding: 4px 12px; border-radius: 4px; }
+    .back-btn:hover { background: #4caf50; color: #000; }
+  </style>
+
+  <script type="module" src="./global-status-panel.js"></script>
+  <script type="module" src="./command-ingest-panel.js"></script>
+  <script type="module" src="./entropy-timeline.js"></script>
+  <script type="module" src="./gate-decision-view.js"></script>
+  <script type="module" src="./proof-inspector.js"></script>
+  <script type="module" src="./execution-verifier.js"></script>
+  <script type="module" src="./determinism-matrix.js"></script>
+  <script type="module" src="./governance-control.js"></script>
+  <script type="module" src="./violation-log.js"></script>
+  <script type="module" src="./public-proof-view.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>CCDAD-100 — Deterministic Audit & Governance UI (System v1.1)</h1>
+  <a href="/" class="back-btn">← Back to Main App</a>
+</header>
+
+<div class="container">
+  <global-status-panel></global-status-panel>
+  
+  <div class="grid-2">
+    <command-ingest-panel></command-ingest-panel>
+    <gate-decision-view></gate-decision-view>
+  </div>
+
+  <entropy-timeline></entropy-timeline>
+
+  <div class="grid-2">
+    <proof-inspector></proof-inspector>
+    <execution-verifier></execution-verifier>
+  </div>
+
+  <determinism-matrix></determinism-matrix>
+  
+  <div class="grid-2">
+    <violation-log></violation-log>
+    <governance-control></governance-control>
+  </div>
+
+  <public-proof-view></public-proof-view>
+</div>
+
+</body>
+</html>
